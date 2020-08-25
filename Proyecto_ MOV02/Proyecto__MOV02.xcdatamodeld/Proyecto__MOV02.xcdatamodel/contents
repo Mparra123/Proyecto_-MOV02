@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="15702" systemVersion="19F101" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Negocio" representedClassName="Negocio" syncable="YES" codeGenerationType="class">
+        <attribute name="descripcion" optional="YES" attributeType="String"/>
+        <attribute name="id" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="imagen" optional="YES" attributeType="Binary"/>
+        <attribute name="nombre" optional="YES" attributeType="String"/>
+        <attribute name="telefono" optional="YES" attributeType="String"/>
+        <relationship name="relationship" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Roles"/>
+    </entity>
+    <entity name="Roles" representedClassName="Roles" syncable="YES" codeGenerationType="class">
+        <attribute name="id" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="nombreRol" optional="YES" attributeType="String"/>
+        <userInfo>
+            <entry key="negocio" value="2"/>
+            <entry key="usuario" value="1"/>
+        </userInfo>
+    </entity>
+    <entity name="Usuario" representedClassName="Usuario" syncable="YES" codeGenerationType="class">
+        <attribute name="id" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="pass" optional="YES" attributeType="String"/>
+        <relationship name="relationship" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Roles"/>
+    </entity>
+    <elements>
+        <element name="Usuario" positionX="-12729.1484375" positionY="-11223.58984375" width="128" height="103"/>
+        <element name="Roles" positionX="-12468.3046875" positionY="-11186.6171875" width="128" height="73"/>
+        <element name="Negocio" positionX="-12667.4140625" positionY="-11418.2734375" width="128" height="133"/>
+    </elements>
+</model>
